@@ -17,12 +17,13 @@ const App = ({ postId }) => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <div className="form-group" style={{ marginBottom: "1%" }}>
+        <div className="form-group" style={{ marginBottom: "4px" }}>
           <label>New Comment</label>
           <input
             value={content}
             onChange={(e) => setContent(e.target.value)}
             className="form-control"
+            placeholder="Write a comment..."
           />
         </div>
         <button className="btn btn-primary">Submit</button>
