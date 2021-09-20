@@ -17,7 +17,7 @@ const App = ({ postId }) => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
+        <div className="form-group" style={{ marginBottom: "1%" }}>
           <label>New Comment</label>
           <input
             value={content}

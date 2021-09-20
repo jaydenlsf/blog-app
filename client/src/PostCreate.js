@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
+        <div className="form-group" style={{ marginBottom: "1%" }}>
           <label>Title</label>
           <input
             value={title}
