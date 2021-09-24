@@ -14,6 +14,10 @@ const App = ({ postId }) => {
     setContent("");
   };
 
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
+
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -26,7 +30,13 @@ const App = ({ postId }) => {
             placeholder="Write a comment..."
           />
         </div>
-        <button className="btn btn-primary">Submit</button>
+        <button
+          className="btn btn-primary"
+          disabled={!content}
+          onClick={refreshPage}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

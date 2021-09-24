@@ -14,6 +14,10 @@ const App = () => {
     setTitle("");
   };
 
+  const refreshPage = () => {
+    window.location.reload(false);
+  };
+
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -26,7 +30,13 @@ const App = () => {
             placeholder="Write something to post..."
           />
         </div>
-        <button className="btn btn-primary">Submit</button>
+        <button
+          className="btn btn-primary"
+          disabled={!title}
+          onClick={refreshPage}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
