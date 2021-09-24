@@ -9,7 +9,7 @@ app.post("/events", async (req, res) => {
   const { type, data } = req.body;
 
   if (type === "CommentCreated") {
-    const status = data.content.include("orange") ? "rejected" : "approved";
+    const status = data.content.includes("orange") ? "rejected" : "approved";
 
     await axios.post("http://localhost:4005/events", {
       type: "CommentModerated",
@@ -26,5 +26,5 @@ app.post("/events", async (req, res) => {
 });
 
 app.listen(4003, () => {
-  console.log("Server is listening on port 4003.");
+  console.log("Server is listening on port 4003");
 });
